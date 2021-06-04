@@ -22,6 +22,8 @@ const useMetamask = () => {
   const _isMounted       = useRef(true);
   const _isConnectCalled = useRef(false);
   const [ provider ]     = useState(window.ethereum);
+
+  console.log(provider);
   useEffect(() => {
     return () => {
       _isMounted.current = false;
